@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail Catalog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles specific to index.html can be added here */
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="topnav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <!-- Add more links as needed -->
+    </div>
+
+    <!-- Banner Section -->
+    <div class="main-banner">
+        <div class="text-block">
+            <h1>Welcome to our Cocktail Catalog</h1>
+            <p>Discover and like your favorite cocktails!</p>
+        </div>
+    </div>
+
+    <!-- Drink Collection Section -->
+    <div id="drink-collection" class="row">
+        <!-- Drinks will be dynamically added here by JavaScript -->
+    </div>
+
+    <!-- Add New Drink Section -->
+    <div class="add-drink">
+        <form id="addDrinkForm">
+            <input type="text" class="input-text" placeholder="Enter name">
+            <input type="text" class="input-text" placeholder="Enter image URL">
+            <button type="submit" class="submit">Add New Drink</button>
+        </form>
+    </div>
+
+   <script src="script.js"></script>
+</body>
+</html>

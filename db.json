@@ -1,0 +1,112 @@
+{
+    "cocktail": [
+      {
+        "id": "1",
+        "name": "old fashioned",
+        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
+        "likes": 0
+      },
+      {
+        "id": "2",
+        "name": "long island tea",
+        "image": "https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg",
+        "likes": 0
+      },
+      {
+        "id": "3",
+        "name": "whiskey sour",
+        "image": "https://www.thecocktaildb.com/images/media/drink/hbkfsh1589574990.jpg",
+        "likes": 0
+      },
+      {
+        "id": "4",
+        "name": "Dry Martini",
+        "image": "https://www.thecocktaildb.com/images/media/drink/6ck9yi1589574317.jpg",
+        "likes": 0
+      },
+      {
+        "id": "5",
+        "name": "planters punch",
+        "image": "https://www.thecocktaildb.com/images/media/drink/jn6o251643844541.jpg",
+        "likes": 0
+      },
+      {
+        "id": "6",
+        "name": "old cuban",
+        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
+        "likes": null
+      },
+      {
+        "id": "7",
+        "name": "gin tonic",
+        "image": "https://www.thecocktaildb.com/images/media/drink/qcgz0t1643821443.jpg",
+        "likes": null
+      },
+      {
+        "id": "8",
+        "name": "mauresque",
+        "image": "https://www.thecocktaildb.com/images/media/drink/duwfa11686236556.jpg",
+        "likes": 0
+      },
+      {
+        "id": "f05d",
+        "name": "old cuban",
+        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
+        "likes": 0
+      },
+      {
+        "id": "6331",
+        "name": "old cuban",
+        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
+        "likes": 0
+      },
+      {
+        "id": "5d87",
+        "name": "long island tea",
+        "image": "https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg",
+        "likes": 0
+      },
+      {
+        "id": "3842",
+        "name": "long island tea",
+        "image": "https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg",
+        "likes": 0
+      },
+      {
+        "id": "59f2",
+        "name": "long island tea",
+        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
+        "likes": null
+      },
+      {
+        "id": "a42f",
+        "name": "long island tea",
+        "image": "https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg",
+        "likes": 0
+      },
+      {
+        "id": "1f9a",
+        "name": "old cuban",
+        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
+        "likes": 0
+      },
+      {
+        "id": "5d92",
+        "name": "glitch ",
+        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
+        "likes": 0
+      },
+      {
+        "id": "5680",
+        "name": "Test",
+        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
+        "likes": null
+      },
+      {
+        "id": "d69a",
+        "name": "long island tea",
+        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
+        "likes": 0
+      }
+    ]
+  }
