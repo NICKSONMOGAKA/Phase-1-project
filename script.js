@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const fetchCocktails = async () => {
     try {
-      const response = await fetch("https://project-backend-navy.vercel.app/");
+      const response = await fetch("https://project-backend-navy.vercel.app/cocktails");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const response = await fetch("https://project-backend-navy.vercel.app/", {
+      const response = await fetch("https://project-backend-navy.vercel.app/cocktails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
