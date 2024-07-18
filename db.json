@@ -1,112 +1,32 @@
 {
-    "cocktail": [
-      {
-        "id": "1",
-        "name": "old fashioned",
-        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
-        "likes": 0
-      },
-      {
-        "id": "2",
-        "name": "long island tea",
-        "image": "https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg",
-        "likes": 0
-      },
-      {
-        "id": "3",
-        "name": "whiskey sour",
-        "image": "https://www.thecocktaildb.com/images/media/drink/hbkfsh1589574990.jpg",
-        "likes": 0
-      },
-      {
-        "id": "4",
-        "name": "Dry Martini",
-        "image": "https://www.thecocktaildb.com/images/media/drink/6ck9yi1589574317.jpg",
-        "likes": 0
-      },
-      {
-        "id": "5",
-        "name": "planters punch",
-        "image": "https://www.thecocktaildb.com/images/media/drink/jn6o251643844541.jpg",
-        "likes": 0
-      },
-      {
-        "id": "6",
-        "name": "old cuban",
-        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
-        "likes": null
-      },
-      {
-        "id": "7",
-        "name": "gin tonic",
-        "image": "https://www.thecocktaildb.com/images/media/drink/qcgz0t1643821443.jpg",
-        "likes": null
-      },
-      {
-        "id": "8",
-        "name": "mauresque",
-        "image": "https://www.thecocktaildb.com/images/media/drink/duwfa11686236556.jpg",
-        "likes": 0
-      },
-      {
-        "id": "f05d",
-        "name": "old cuban",
-        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
-        "likes": 0
-      },
-      {
-        "id": "6331",
-        "name": "old cuban",
-        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
-        "likes": 0
-      },
-      {
-        "id": "5d87",
-        "name": "long island tea",
-        "image": "https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg",
-        "likes": 0
-      },
-      {
-        "id": "3842",
-        "name": "long island tea",
-        "image": "https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg",
-        "likes": 0
-      },
-      {
-        "id": "59f2",
-        "name": "long island tea",
-        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
-        "likes": null
-      },
-      {
-        "id": "a42f",
-        "name": "long island tea",
-        "image": "https://www.thecocktaildb.com/images/media/drink/nkwr4c1606770558.jpg",
-        "likes": 0
-      },
-      {
-        "id": "1f9a",
-        "name": "old cuban",
-        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
-        "likes": 0
-      },
-      {
-        "id": "5d92",
-        "name": "glitch ",
-        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
-        "likes": 0
-      },
-      {
-        "id": "5680",
-        "name": "Test",
-        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
-        "likes": null
-      },
-      {
-        "id": "d69a",
-        "name": "long island tea",
-        "image": "https://www.thecocktaildb.com/images/media/drink/eo8gfx1699022995.jpg",
-        "likes": 0
-      }
-    ]
-  }
+  "cocktails": [
+    {
+      "id": "1",
+      "name": "Margarita",
+      "ingredients": "2 oz Tequila, 1 oz Lime juice, 1 oz Triple sec",
+      "instructions": "Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail.",
+      "image": "https://www.thecocktaildb.com/images/media/drink/wpxpvu1439905379.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Martini",
+      "ingredients": "2 1/2 oz Gin, 1/2 oz Dry Vermouth",
+      "instructions": "Place ice and water in a glass to chill it. Pour gin and vermouth into a mixing glass. Stir well for 20 seconds and strain into the chilled glass.",
+      "image": "https://www.thecocktaildb.com/images/media/drink/71t8581504353095.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Negroni",
+      "ingredients": "1 oz Gin, 1 oz Campari, 1 oz Sweet Vermouth",
+      "instructions": "Stir all ingredients with ice, then strain into a glass.",
+      "image": "https://www.thecocktaildb.com/images/media/drink/qgdu971561574065.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Bloody Mary",
+      "ingredients": "1 1/2 oz Vodka, 3 oz Tomato juice, 1/2 oz Lemon juice, Dash of Worcestershire sauce, Dash of Tabasco sauce, Pinch of salt and pepper",
+      "instructions": "Build all ingredients in a glass over ice. Stir gently.",
+      "image": "https://www.thecocktaildb.com/images/media/drink/t6caa21582485702.jpg"
+    }
+  ]
+}

@@ -1,136 +1,62 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const cocktailList = document.getElementById("cocktailList");
+  const addCocktailForm = document.getElementById("addCocktailForm");
 
-
-function fetchDrinks(){
-
-    fetch("https://api.myjson.online/v1/records/640ff52d-a7c1-41ff-bdb1-27130c6d858a")
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-
-        
-        if (data.data.cocktail) {
-          // Access the drinks property and iterate over its values
-          Object.values(data.data.cocktail).forEach(drink => {
-              // Assuming addDrink is a function that adds the drink to the UI
-              addDrink(drink);
-          });
-      } else {
-          console.error("No drinks found in the data");
+  const fetchCocktails = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/cocktails");
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
       }
-        
-      
-    })
-    .catch(error => {
-      console.error("Error fetching drinks:", error);
-      
+      const cocktails = await response.json();
+      displayCocktails(cocktails);
+    } catch (error) {
+      console.error("Error fetching cocktails:", error);
+    }
+  };
+
+  const displayCocktails = (cocktails) => {
+    cocktailList.innerHTML = cocktails
+      .map(
+        (cocktail) => `
+          <div class="cocktail">
+            <h2>${cocktail.name}</h2>
+            <img src="${cocktail.image}" alt="${cocktail.name}" class="cocktail-image">
+            <p><strong>Ingredients:</strong> ${cocktail.ingredients}</p>
+            <p><strong>Instructions:</strong> ${cocktail.instructions}</p>
+          </div>
+        `
+      )
+      .join("");
+  };
+
+  addCocktailForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const formData = new FormData(addCocktailForm);
+    const newCocktail = {
+      name: formData.get("cocktailName"),
+      ingredients: formData.get("cocktailIngredients"),
+      instructions: formData.get("cocktailInstructions"),
+      image: formData.get("cocktailImage"), 
+    };
+
+    try {
+      const response = await fetch("http://localhost:3000/cocktails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newCocktail),
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      fetchCocktails(); // Refresh cocktails after adding
+      addCocktailForm.reset(); // Clear form inputs
+    } catch (error) {
+      console.error("Error adding cocktail:", error);
+    }
   });
-}
-fetchDrinks()
 
-
-function addDrink(drink){
-    let div = document.getElementById('drink-collection')
-    let card = document.createElement("div")
-    div.appendChild(card)
-    card.className= "card"
-    
-    let flipCardInner=document.createElement("div")
-    card.appendChild(flipCardInner)
-    flipCardInner.className = "flip-card-inner"
-    
-    let flipCardFront = document.createElement("div")
-    flipCardInner.appendChild(flipCardFront)
-    flipCardFront.className = "flip-card-front"
-    
-    let flipCardBack = document.createElement("div")
-    flipCardInner.appendChild(flipCardBack)
-    flipCardBack.className = "flip-card-back"
-    
-    
-    let h4 = document.createElement("h4")
-      flipCardFront.appendChild(h4)
-      let name = drink.name
-      h4.innerText = name
-    
-    
-      let image = document.createElement("img")
-      flipCardFront.appendChild(image)
-      image.className ="toy-avatar"
-      let imgURL = drink.image
-      image.src = drink.image
-    
-      
-    
-      
-      let p = document.createElement("p")
-      p.innerText =`${drink.likes} likes` 
-      flipCardFront.append(p)
-    
-      let button = document.createElement("button")
-      card.append(button)
-      button.className = "like-btn"
-      button.id = drink.id
-      button.innerText = "♥"
-      button.addEventListener('click',(e) => {
-      console.log("event", e)
-        e.preventDefault()
-        increment(e)
-    }
-        )
-    
-    }
-    function increment(e) {
-      
-      let count = parseInt(e.target.previousElementSibling.innerText) + 1;  
-      
-       
-      
-        fetch(`http://localhost:3000/cocktail/${e.target.id}`, {
-              method: "PATCH",
-              headers: {
-                "Content-Type": "application/json",
-                "Accept" : "application/json"
-              },
-              
-              body: JSON.stringify({
-                likes: count,
-              })
-          })
-         .then((response) => response.json())
-         .then((json) => console.log(json));
-          
-    }
-     
-    
-      function addNewDrink() {
-        const getButton = document.querySelector(".add-drink");
-      
-        getButton.addEventListener("submit", (event) => {
-          event.preventDefault();
-          
-          const input = (document.querySelectorAll(".input-text"));
-      
-          const postRequest = {
-            method: "POST",
-            
-            body: JSON.stringify({
-              name: input[0].value,
-              image: input[1].value,
-              likes: 0,
-            }),
-          };
-      
-          fetch("http://localhost:3000/cocktail", postRequest)
-          .then((res) => res.json())
-          .then(res => console.log(res)) 
-          console.log(input[0].value);
-          console.log(input[1].value);
-        });
-      }
-      addNewDrink()
-
-
-
-
-
-
+  fetchCocktails(); // Initial fetch when DOM content is loaded
+});

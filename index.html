@@ -1,46 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cocktail Catalog</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Additional styles specific to index.html can be added here */
-    </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cocktail Recipes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>COCKTAIL HEAVEN</h1>
+    </header>
 
-    <!-- Navigation Bar -->
-    <div class="topnav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <!-- Add more links as needed -->
-    </div>
+    <main id="cocktailList"></main>
 
-    <!-- Banner Section -->
-    <div class="main-banner">
-        <div class="text-block">
-            <h1>Welcome to our Cocktail Catalog</h1>
-            <p>Discover and like your favorite cocktails!</p>
-        </div>
-    </div>
+    <section id="addCocktail">
+      <h2>Add New Cocktail</h2>
+      <form id="addCocktailForm">
+        <label for="cocktailName">Name:</label>
+        <input type="text" id="cocktailName" name="cocktailName" required />
+        <label for="cocktailIngredients">Ingredients:</label>
+        <textarea
+          id="cocktailIngredients"
+          name="cocktailIngredients"
+          rows="4"
+          required
+        ></textarea>
+        <label for="cocktailInstructions">Instructions:</label>
+        <textarea
+          id="cocktailInstructions"
+          name="cocktailInstructions"
+          rows="4"
+          required
+        ></textarea>
+        <label for="cocktailImage">Image URL:</label>
+        <input type="text" id="cocktailImage" name="cocktailImage" required />
+        <button type="submit">Add Cocktail</button>
+      </form>
+    </section>
 
-    <!-- Drink Collection Section -->
-    <div id="drink-collection" class="row">
-        <!-- Drinks will be dynamically added here by JavaScript -->
-    </div>
-
-    <!-- Add New Drink Section -->
-    <div class="add-drink">
-        <form id="addDrinkForm">
-            <input type="text" class="input-text" placeholder="Enter name">
-            <input type="text" class="input-text" placeholder="Enter image URL">
-            <button type="submit" class="submit">Add New Drink</button>
-        </form>
-    </div>
-
-   <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
