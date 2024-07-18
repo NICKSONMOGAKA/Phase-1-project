@@ -51,12 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-      fetchCocktails(); // Refresh cocktails after adding
-      addCocktailForm.reset(); // Clear form inputs
+      fetchCocktails(); 
+      addCocktailForm.reset(); 
     } catch (error) {
       console.error("Error adding cocktail:", error);
     }
   });
 
-  fetchCocktails(); // Initial fetch when DOM content is loaded
+  fetchCocktails(); 
 });
