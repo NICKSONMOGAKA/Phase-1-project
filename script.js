@@ -22,12 +22,23 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="cocktail">
             <h2>${cocktail.name}</h2>
             <img src="${cocktail.image}" alt="${cocktail.name}" class="cocktail-image">
-            <p><strong>Ingredients:</strong> ${cocktail.ingredients}</p>
-            <p><strong>Instructions:</strong> ${cocktail.instructions}</p>
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              ${formatListItems(cocktail.ingredients)}
+            </ul>
+            <p><strong>Instructions:</strong></p>
+            <ul>
+              ${formatListItems(cocktail.instructions)}
+            </ul>
           </div>
         `
       )
       .join("");
+  };
+
+  const formatListItems = (itemsString) => {
+    const itemsArray = itemsString.split(",").map(item => `<li>${item.trim()}</li>`);
+    return itemsArray.join("");
   };
 
   addCocktailForm.addEventListener("submit", async (event) => {
