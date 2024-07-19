@@ -38,8 +38,8 @@ main {
   width: 30%;
   background-color: white;
   border-radius: 9px;
-  padding: 4rem;
-  margin-bottom: 4rem;
+  padding: 2rem; /* Reduced padding */
+  margin-bottom: 2rem; /* Reduced margin */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -58,19 +58,18 @@ main {
   margin-bottom: 0.5rem;
 }
 
-section {
+#addCocktail {
   width: 80%;
   margin-top: 2rem;
   background-color: rgb(196, 119, 57);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 1rem; /* Reduced padding */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 form label {
@@ -83,6 +82,7 @@ form textarea {
   margin-bottom: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 1rem; /* Adjusted font size */
 }
 
 form button {
@@ -109,7 +109,7 @@ form button:hover {
     width: 80%;
   }
 
-  section {
+  #addCocktail {
     width: 80%;
   }
 }
