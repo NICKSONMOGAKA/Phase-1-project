@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cocktail Recipes</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>COCKTAIL HEAVEN</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cocktail Recipes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="addCocktail">
+    <h2>Add New Cocktail</h2>
+    <form id="addCocktailForm">
+      <label for="cocktailName">Name:</label>
+      <input type="text" id="cocktailName" name="cocktailName" required />
+      <label for="cocktailIngredients">Ingredients (separated by commas):</label>
+      <textarea id="cocktailIngredients" name="cocktailIngredients" rows="4" required></textarea>
+      <label for="cocktailInstructions">Instructions:</label>
+      <textarea id="cocktailInstructions" name="cocktailInstructions" rows="4" required></textarea>
+      <label for="cocktailImage">Image URL:</label>
+      <input type="text" id="cocktailImage" name="cocktailImage" required />
+      <button type="submit">Add Cocktail</button>
+    </form>
+  </section>
 
-    <main id="cocktailList"></main>
+  <header>
+    <h1>COCKTAIL HEAVEN</h1>
+  </header>
 
-    <section id="addCocktail">
-      <h2>Add New Cocktail</h2>
-      <form id="addCocktailForm">
-        <label for="cocktailName">Name:</label>
-        <input type="text" id="cocktailName" name="cocktailName" required />
-        <label for="cocktailIngredients">Ingredients:</label>
-        <textarea
-          id="cocktailIngredients"
-          name="cocktailIngredients"
-          rows="4"
-          required
-        ></textarea>
-        <label for="cocktailInstructions">Instructions:</label>
-        <textarea
-          id="cocktailInstructions"
-          name="cocktailInstructions"
-          rows="4"
-          required
-        ></textarea>
-        <label for="cocktailImage">Image URL:</label>
-        <input type="text" id="cocktailImage" name="cocktailImage" required />
-        <button type="submit">Add Cocktail</button>
-      </form>
-    </section>
+  <main id="cocktailList"></main>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
